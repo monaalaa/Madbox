@@ -2,9 +2,8 @@
 
 namespace Enemies
 {
-    public class EnemiesView : MonoBehaviour
+    public class EnemyView : MonoBehaviour
     {
         [SerializeField] private EnemyModel Model;
-        
     }
 }

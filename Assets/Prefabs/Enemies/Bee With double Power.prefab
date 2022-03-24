@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4487983352851325311}
   - component: {fileID: -6881972265948154936}
   m_Layer: 0
-  m_Name: Bee
+  m_Name: Bee With double Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ee318e98b74c2dbb1f519d7334384b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 11400000, guid: a96daa5b26951444dbf329b2bbdff2b7, type: 2}
+  Model: {fileID: 11400000, guid: d1faa621f6dff6c4a985c37585fe8891, type: 2}
 --- !u!1 &6926839794863368101
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,6 @@ namespace Enemies
 {
     public class EnemyController : MonoBehaviour
     {
-        [SerializeField] private EnemiesView view;
+        [SerializeField] private EnemyView view;
     }
 }
