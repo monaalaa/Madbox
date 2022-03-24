@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2542d12dc3384f0ba7e1731aface41f9, type: 3}
   m_Name: DoublePower bee
   m_EditorClassIdentifier: 
-  model: {fileID: 1358921057130329688, guid: 41e04faa14fb7a34e8b16750ec910fc3, type: 3}
+  model: {fileID: 1358921057130329688, guid: fca8196ddf9ce584790ce71aa9e7ff1f, type: 3}
   AttackPower: 6
+  AttackRange: 30
   GeneratedWeaponAfterDeath: CurvedSword
+  PlayerTag: Player
