@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Weapons;
 
 namespace Enemies
 {
@@ -6,7 +7,7 @@ namespace Enemies
     public class EnemyModel : ScriptableObject
     {
         public GameObject model;
-        public GameObject weapon;
+        public Weapon weapon;
         public int health;
         public int attackRange;
         public string generatedWeaponAfterDeath; 

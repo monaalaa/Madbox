@@ -6,7 +6,7 @@ namespace Weapons
     {
         public override void Execute()
         {
-            transform.DOMove(Target.transform.position,0.5f);
+            transform.DOMove(Target,0.5f);
         }
     }
 }

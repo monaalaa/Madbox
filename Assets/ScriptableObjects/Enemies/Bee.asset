@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bee
   m_EditorClassIdentifier: 
   model: {fileID: 1358921057130329688, guid: 41e04faa14fb7a34e8b16750ec910fc3, type: 3}
-  weapon: {fileID: 7283453589681059438, guid: cd306863a1ad2e74784b70f8b5fc2793, type: 3}
+  weapon: {fileID: 3720019346722870801, guid: cd306863a1ad2e74784b70f8b5fc2793, type: 3}
   health: 10
-  attackRange: 5
+  attackRange: 40
   generatedWeaponAfterDeath: 
   playerTag: Player

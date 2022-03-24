@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ee318e98b74c2dbb1f519d7334384b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 11400000, guid: d1faa621f6dff6c4a985c37585fe8891, type: 2}
+  model: {fileID: 11400000, guid: d1faa621f6dff6c4a985c37585fe8891, type: 2}
+  weaponSpawnPoint: {fileID: 9172430188988100668}
 --- !u!114 &5020792963407893080
 MonoBehaviour:
   m_ObjectHideFlags: 0

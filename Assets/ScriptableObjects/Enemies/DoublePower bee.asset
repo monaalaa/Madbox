@@ -15,6 +15,6 @@ MonoBehaviour:
   model: {fileID: 1358921057130329688, guid: fca8196ddf9ce584790ce71aa9e7ff1f, type: 3}
   weapon: {fileID: 7283453589681059438, guid: cd306863a1ad2e74784b70f8b5fc2793, type: 3}
   health: 0
-  attackRange: 0
+  attackRange: 30
   generatedWeaponAfterDeath: 
   playerTag: Player

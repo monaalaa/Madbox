@@ -1,5 +1,4 @@
-﻿using System;
-using Damageables;
+﻿using Damageables;
 using UnityEngine;
 
 namespace Weapons
@@ -7,13 +6,13 @@ namespace Weapons
     public abstract class Weapon : MonoBehaviour
     { 
         public int attackPower;
-        protected Transform Target;
-        protected string TargetTag;
+        protected Vector3 Target;
+        private string _targetTag;
        
-        public void InitWeapon(Transform target, string targetTag)
+        public void InitWeapon(Vector3 target, string targetTag)
         {
             Target = target;
-            TargetTag = targetTag;
+            _targetTag = targetTag;
         }
       
         public virtual void Execute()
@@ -22,7 +21,7 @@ namespace Weapons
         
         public void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag(TargetTag))
+            if (collision.gameObject.CompareTag(_targetTag))
             {
                 ApplyCollisionEffect();
                 collision.gameObject.GetComponent<Damageable>().ApplyDamage?.Invoke(attackPower);
