@@ -7,6 +7,8 @@ namespace Enemies
     {
         public GameObject model;
         public int AttackPower;
+        public int AttackRange;
         public string GeneratedWeaponAfterDeath;
+       [HideInInspector] public string PlayerTag = "Player";
     }
 }
