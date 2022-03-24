@@ -7,9 +7,9 @@ namespace Enemies
     public abstract class EnemyController : MonoBehaviour
     {
         public EnemyView view;
-        protected GameObject _target;
+        protected GameObject Target;
         private Vector3 _initialPosition;
-        protected Coroutine _attackCoroutine;
+        protected Coroutine AttackCoroutine;
         private void Awake()
         {
             EventsManager.PlayerStartMoving += ResetPosition;
@@ -17,7 +17,7 @@ namespace Enemies
         }
         private void Start()
         {
-            _target = GameObject.FindWithTag(view.Model.PlayerTag);
+            Target = GameObject.FindWithTag(view.Model.playerTag);
             _initialPosition = transform.position;
         }
         protected virtual void AttackPlayer()

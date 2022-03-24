@@ -1,8 +1,11 @@
-﻿namespace Player
+﻿using UnityEngine;
+
+namespace Player
 {
-    public class PlayerModel
+    [CreateAssetMenu(fileName = "PlayerData",menuName = "Player",order = 0)]
+    public class PlayerModel : ScriptableObject
     {
-        public int Health;
-        public string WeaponName;
+         public int health;
+         public string weaponName;
     }
 }
