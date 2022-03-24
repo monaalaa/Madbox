@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Player
+namespace Player.misc
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class PlayerMotor : MonoBehaviour
