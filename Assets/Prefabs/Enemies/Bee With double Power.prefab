@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 297763066410921876}
   - component: {fileID: -4487983352851325311}
   - component: {fileID: -6881972265948154936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bee With double Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69c0cdfecca4b4f44b94c6adf07b7f3e, type: 2}
+  - {fileID: 2100000, guid: 100ca08f2ffd3b34c943c365b13de280, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
