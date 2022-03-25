@@ -7,7 +7,6 @@ namespace Enemies
     public class EnemyModel : ScriptableObject
     {
         public GameObject model;
-        public Weapon weapon;
         public int health;
         public int attackRange;
         public string generatedWeaponAfterDeath; 

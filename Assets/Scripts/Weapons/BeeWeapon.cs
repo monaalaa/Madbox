@@ -1,14 +1,24 @@
 ﻿using Ammunition;
+using UnityEngine;
 
 namespace Weapons
 {
     public class BeeWeapon : ShootingWeapon
     {
-        public void Attack()
+        private GameObject tempAmmunition;
+        public override void Attack()
         {
             if (!CanAttack)
                 return;
-            var tempAmmunition = Instantiate(ammunition,ammunitionParent);
+            if (tempAmmunition == null)
+            {
+                tempAmmunition = Instantiate(ammunition,ammunitionParent);
+            }
+            else
+            {
+                tempAmmunition.transform.position=Vector3.zero;
+                tempAmmunition.SetActive(true);
+            }
             tempAmmunition.GetComponent<IAmmunition>().Execute();
             //numberOfBullets--;
         }

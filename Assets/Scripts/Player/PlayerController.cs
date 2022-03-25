@@ -23,7 +23,7 @@ namespace Player
         public void ApplyDamage(int damage)
         {
             view.model.health -= damage;
-            Debug.Log("Damage");
+            Debug.Log("Damage " + damage);
             if (view.model.health < 0)
             {
                 view.model.health = 0;

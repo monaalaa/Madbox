@@ -7,8 +7,8 @@ We will evaluate code architecture, code readability, code performance, and game
 
 Phase 1: Mandatory: 
     - Implement character movement in the 3d environment using 1 finger / Mouse left click + drag.
-        - Reference: Archero
-    - Hero will auto-attack when not moving
+        - Reference: Archero (Done)
+    - Hero will auto-attack when not moving (Done)
     - Hero auto-selects the closest target in range and sticks to it until the target is dead or the hero moves.
     - Hero can equip 3 different weapons: curved sword, greatsword, long sword
     - When equipped, each weapon will modify:
@@ -17,7 +17,7 @@ Phase 1: Mandatory:
         - Hero's movement speed
         - Attack range
     - Hero starts the game with a random weapon equipped automatically.
-    - Enemies spawn in random positions on the map and stay there waiting to be attacked.
+    - Enemies spawn in random positions on the map and stay there waiting to be attacked.(Done)
 
 Bonus Phase: The UI
     - Enemies have health bars

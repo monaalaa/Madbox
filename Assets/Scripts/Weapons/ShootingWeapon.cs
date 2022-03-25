@@ -6,9 +6,14 @@ namespace Weapons
         [SerializeField] protected GameObject ammunition;
         [SerializeField] protected int numberOfAmmunition;
         [SerializeField] protected Transform ammunitionParent;
-        public virtual bool CanAttack => numberOfAmmunition > 0;
-      
-        public void Attack()
+
+        public virtual bool CanAttack
+        {
+            get { return numberOfAmmunition > 0; }
+            set { }
+        }
+
+        public virtual void Attack()
         {
             if (!CanAttack)
                 return;

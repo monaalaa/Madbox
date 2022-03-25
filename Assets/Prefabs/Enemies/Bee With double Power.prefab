@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 11400000, guid: d1faa621f6dff6c4a985c37585fe8891, type: 2}
+  Weapon: {fileID: 7398251145155740524}
   weaponSpawnPoint: {fileID: 9172430188988100668}
 --- !u!114 &5020792963407893080
 MonoBehaviour:
@@ -587,6 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9172430188988100668}
+  - component: {fileID: 5811151968989928133}
   m_Layer: 8
   m_Name: Weapon Spown Point
   m_TagString: Untagged
@@ -608,3 +610,18 @@ Transform:
   m_Father: {fileID: 297763066410921876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5811151968989928133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398251145155740524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bd85a1afa849a4bace80d2c277850f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammunition: {fileID: 7283453589681059438, guid: cd306863a1ad2e74784b70f8b5fc2793, type: 3}
+  numberOfAmmunition: 1000
+  ammunitionParent: {fileID: 9172430188988100668}

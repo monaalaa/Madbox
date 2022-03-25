@@ -2,7 +2,7 @@
 {
     public interface IWeapon
     {
-        bool CanAttack { get;}
+        bool CanAttack { get; set; }
         void Attack();
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using Weapons;
@@ -10,7 +9,7 @@ namespace Enemies.Beez
     { 
         private void Update()
         {
-           // transform.LookAt(Target.transform);
+            transform.LookAt(Target.transform);
         }
         protected override void AttackPlayer()
         {
@@ -42,10 +41,9 @@ namespace Enemies.Beez
 
         private void GenerateWeapon()
         {
-            var targetPosition = Target.transform.position;
-            var weapon = Instantiate(view.model.weapon.gameObject,view.weaponSpawnPoint).GetComponent<Weapon>();
-            weapon.InitWeapon(targetPosition,view.model.playerTag);
-            weapon.Execute();
+            var weapon = Instantiate(view.Weapon,view.weaponSpawnPoint).GetComponent<IWeapon>();
+            weapon.CanAttack = true;
+            weapon.Attack();
         }
     }
 }
