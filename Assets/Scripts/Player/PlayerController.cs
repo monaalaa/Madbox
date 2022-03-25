@@ -2,10 +2,11 @@
 using Managers;
 using Player.misc;
 using UnityEngine;
+using Weapons;
 
 namespace Player
 {
-    public class PlayerController : Damageable
+    public class PlayerController : MonoBehaviour,IDamageable
     {
         private int _rayCastDistance = 1000;
         private Camera _camera;
@@ -13,12 +14,13 @@ namespace Player
         [SerializeField] private PlayerMotor motor;
         [SerializeField] private LayerMask movementMask;
         [SerializeField] private PlayerView view;
+        private IWeapon _weapon;
+        
         private void Start()
         {
             _camera = Camera.main;
-            ApplyDamage += OnApplyDamage;
         }
-        private void OnApplyDamage(int damage)
+        public void ApplyDamage(int damage)
         {
             view.model.health -= damage;
             Debug.Log("Damage");
@@ -48,6 +50,11 @@ namespace Player
             {
                 motor.Stop();
                 EventsManager.PlayerStopMoving?.Invoke();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _weapon.Attack();
             }
         }
     }

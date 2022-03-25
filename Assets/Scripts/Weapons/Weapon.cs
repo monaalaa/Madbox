@@ -24,7 +24,7 @@ namespace Weapons
             if (collision.gameObject.CompareTag(_targetTag))
             {
                 ApplyCollisionEffect();
-                collision.gameObject.GetComponent<Damageable>().ApplyDamage?.Invoke(attackPower);
+                collision.gameObject.GetComponent<IDamageable>().ApplyDamage(attackPower);
             }
         }
 

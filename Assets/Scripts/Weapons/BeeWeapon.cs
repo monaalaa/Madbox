@@ -1,12 +1,16 @@
-﻿using DG.Tweening;
+﻿using Ammunition;
 
 namespace Weapons
 {
-    public class BeeWeapon : Weapon
+    public class BeeWeapon : ShootingWeapon
     {
-        public override void Execute()
+        public void Attack()
         {
-            transform.DOMove(Target,0.5f);
+            if (!CanAttack)
+                return;
+            var tempAmmunition = Instantiate(ammunition,ammunitionParent);
+            tempAmmunition.GetComponent<IAmmunition>().Execute();
+            //numberOfBullets--;
         }
     }
 }

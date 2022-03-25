@@ -1,10 +1,11 @@
-﻿using DG.Tweening;
+﻿using Damageables;
+using DG.Tweening;
 using Managers;
 using UnityEngine;
 
 namespace Enemies
 {
-    public abstract class EnemyController : MonoBehaviour
+    public abstract class EnemyController : MonoBehaviour,IDamageable
     {
         public EnemyView view;
         protected GameObject Target;
@@ -32,6 +33,10 @@ namespace Enemies
         {
             EventsManager.PlayerStartMoving -= ResetPosition;
             EventsManager.PlayerStopMoving -= AttackPlayer;
+        }
+        public void ApplyDamage(int damage)
+        {
+            
         }
     }
 }
