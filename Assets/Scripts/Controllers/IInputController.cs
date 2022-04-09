@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace Controllers
 {
     public interface IInputController
     {

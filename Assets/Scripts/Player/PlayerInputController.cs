@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using Controllers;
 using UnityEngine;
 
 namespace Player

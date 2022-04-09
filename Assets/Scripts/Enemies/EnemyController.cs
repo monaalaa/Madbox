@@ -1,17 +1,20 @@
-﻿using Damageables;
+﻿using Attacker;
+using Damageables;
 using DG.Tweening;
 using Managers;
 using UnityEngine;
+using Weapons;
 
 namespace Enemies
 {
-    public abstract class EnemyController : MonoBehaviour,IDamageable
+    public abstract class EnemyController : MonoBehaviour,IDamageable,IAttacker
     {
         public EnemyView view;
         protected GameObject Target;
         private Vector3 _initialPosition;
         protected Coroutine AttackCoroutine;
-      
+        public IWeapon Weapon { get; set; }
+        public int Health { get; set; }
         private void Awake()
         {
             EventsManager.PlayerStartMoving += ResetPosition;
@@ -34,9 +37,15 @@ namespace Enemies
             EventsManager.PlayerStartMoving -= ResetPosition;
             EventsManager.PlayerStopMoving -= AttackPlayer;
         }
+ 
         public void ApplyDamage(int damage)
         {
-            
+            Health -= damage;
+            if (Health <= 0)
+            {
+                Debug.Log("Die");
+            }
         }
+      
     }
 }

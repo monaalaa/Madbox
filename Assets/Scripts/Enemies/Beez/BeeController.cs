@@ -16,7 +16,7 @@ namespace Enemies.Beez
             var targetPosition = Target.transform.position;
             var distance = Vector3.Distance (transform.position,targetPosition );
             
-            if (distance < view.model.attackRange)
+            if (distance < Weapon.AttackRange)
             {
                 AttackCoroutine = StartCoroutine(WaitToAttack(targetPosition));
                 InvokeRepeating("GenerateWeapon",2,0.5f);

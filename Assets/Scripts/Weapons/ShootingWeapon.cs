@@ -7,6 +7,8 @@ namespace Weapons
         [SerializeField] protected int numberOfAmmunition;
         [SerializeField] protected Transform ammunitionParent;
 
+        public float AttackRange { get; set; }
+
         public virtual bool CanAttack
         {
             get { return numberOfAmmunition > 0; }

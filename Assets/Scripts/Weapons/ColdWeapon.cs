@@ -5,6 +5,8 @@ namespace Weapons
 {
     public abstract class ColdWeapon : MonoBehaviour,IDamager,IWeapon
     {
+        public float AttackRange { get; set; }
+
         public virtual bool CanAttack
         {
             get => true;

@@ -1,5 +1,6 @@
-﻿using Damageables;
-using Interfaces;
+﻿using Attacker;
+using Controllers;
+using Damageables;
 using Managers;
 using Player.misc;
 using UnityEngine;
@@ -7,16 +8,15 @@ using Weapons;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour,IDamageable
+    public class PlayerController : MonoBehaviour,IDamageable,IAttacker
     {
+        private IInputController _inputController;
         private int _rayCastDistance = 1000;
         private Camera _camera;
-       
         [SerializeField] private PlayerMotor motor;
         [SerializeField] private LayerMask movementMask;
-        [SerializeField] private PlayerView view;
-        private IWeapon _weapon;
-        private IInputController _inputController;
+        public IWeapon Weapon { get; set; }
+        public int Health { get; set; }
         private void Start()
         {
             _camera = Camera.main;
@@ -24,11 +24,11 @@ namespace Player
         }
         public void ApplyDamage(int damage)
         {
-            view.model.health -= damage;
+             Health -= damage;
             Debug.Log("Damage " + damage);
-            if (view.model.health < 0)
+            if (Health < 0)
             {
-                view.model.health = 0;
+                Health = 0;
                 //Note:- Implement GameOver
             }
         }
@@ -56,7 +56,7 @@ namespace Player
 
             if (_inputController.Attack())
             {
-                _weapon.Attack();
+                Weapon.Attack();
             }
         }
     }
