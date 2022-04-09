@@ -1,10 +1,11 @@
+using Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Player.misc
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class PlayerMotor : MonoBehaviour
+    public class PlayerMotor : MonoBehaviour,IMovable
     {
         [SerializeField] private NavMeshAgent agent;
 

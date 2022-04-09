@@ -1,4 +1,5 @@
 ﻿using Damageables;
+using Interfaces;
 using Managers;
 using Player.misc;
 using UnityEngine;
@@ -15,10 +16,11 @@ namespace Player
         [SerializeField] private LayerMask movementMask;
         [SerializeField] private PlayerView view;
         private IWeapon _weapon;
-        
+        private IInputController _inputController;
         private void Start()
         {
             _camera = Camera.main;
+            _inputController = new PlayerInputController();
         }
         public void ApplyDamage(int damage)
         {
@@ -32,11 +34,11 @@ namespace Player
         }
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (_inputController.StartMove())
             {
                 EventsManager.PlayerStartMoving?.Invoke();
             }
-            else if (Input.GetMouseButton(0))
+            else if (_inputController.Moving())
             {
                 Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -46,13 +48,13 @@ namespace Player
                     motor.MoveToPoint(hit.point);
                 }
             }
-            else if (Input.GetMouseButtonUp(0))
+            else if (_inputController.EndMove())
             {
                 motor.Stop();
                 EventsManager.PlayerStopMoving?.Invoke();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (_inputController.Attack())
             {
                 _weapon.Attack();
             }
